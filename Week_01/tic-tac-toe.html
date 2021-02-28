@@ -77,7 +77,7 @@
                 return;
             }
             pattern[y][x] = color;
-            color = nextColor();
+            color = nextColor(color);
             
             render();
             if (testHasWon(pattern, pattern[y][x])) {
@@ -92,13 +92,18 @@
         }
 
         function userMove(x, y) {
-
+            if (winFlag) {
+                return;
+            }
+            if (pattern[y][x] !== 0) {
+                return;
+            }
             pattern[y][x] = color;
             if (testHasWon(pattern, color)) {
-                addText(color === 2 ? '❌' : '⭕️' + ' is winner.');
+                addText((color === 2 ? '❌' : '⭕️') + ' is winner.');
             }
             render();
-            color = nextColor();
+            color = nextColor(color);
             computerMove();
         }
 
@@ -109,10 +114,10 @@
                 pattern[choice.point[1]][choice.point[0]] = color;
             }
             if (testHasWon(pattern, color)) {
-                addText(color === 2 ? '❌' : '⭕️' + ' is winner.');
+                addText((color === 2 ? '❌' : '⭕️') + ' is winner.');
             }
             render();
-            color = nextColor();
+            color = nextColor(color);
         }
 
         function testHasWon(pattern, currentColor) {
@@ -210,7 +215,7 @@
                     }
                     let tmp = clone(pattern);
                     tmp[i][j] = color;
-                    let r = bestChoice(tmp, nextColor()).result;
+                    let r = bestChoice(tmp, nextColor(color)).result;
                     if (-r > result) {
                         result = -r;
                         point = [j, i]
@@ -240,7 +245,7 @@
             document.body.appendChild(p);
         }
 
-        function nextColor() {
+        function nextColor(color) {
             return 3 - color;
         }
 
