@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: grey;
+            display: inline-block;
+            margin: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            opacity: 0.2;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .light {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='h1'></h1>
+    <script>
+        
+    
+
+        function sleep(t) {
+            return new Promise(resolve => {
+                setTimeout(resolve, t)
+            })
+        }
+
+        async function* counter() {
+            let i = 0;
+            while(true) {
+                await sleep(1000);
+                yield i++;
+            }
+        }
+
+        (async function() {
+            var h1 = document.getElementById('h1')
+            for await(let v of counter()) {
+                h1.innerText = v;
+            }
+        })()
+
+    </script>
+</body>
+
+</html>

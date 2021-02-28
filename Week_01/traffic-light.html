@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: grey;
+            display: inline-block;
+            margin: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            opacity: 0.2;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .light {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+    <br>
+    <button id="next">下一个</div>
+    <script>
+        function changeColorLight(color) {
+            var lights = document.getElementsByTagName('div');
+            for (var i = 0; i < 3; i++) {
+                lights[i].classList.remove('light');
+            }
+            document.getElementsByClassName(color)[0].classList.add('light')
+        }
+        function green() {
+            changeColorLight('green')
+        }
+        function yellow() {
+            changeColorLight('yellow')
+        }
+        function red() {
+            changeColorLight('red')
+        }
+
+        // 1. 回调版本
+        // function init() {
+        //     green()
+        //     setTimeout(function () {
+        //         yellow()
+        //         setTimeout(function () {
+        //             red()
+        //             setTimeout(function () {
+        //                 init();
+        //             }, 1000)
+        //         }, 1000)
+        //     }, 1000)
+        // }
+
+        // 2. promise 版本
+        // function init() {
+        //     green();
+        //     sleep(1000).then(() => {
+        //         yellow();
+        //         return sleep(1000);
+        //     }).then(() => {
+        //         red();
+        //         return sleep(1000);
+        //     }).then(init);
+        // }
+
+        // 3. async/await 版本
+        // 可以使用描述同步代码的分支和循环了
+        // async function initAuto() {
+        //     while(true) {
+        //         green();
+        //         await sleep(200);
+        //         yellow();
+        //         await sleep(200);
+        //         red();
+        //         await sleep(200);
+        //     }
+        // }
+
+        // async function initByHand() {
+        //     const el = document.getElementById('next')
+        //     while(true) {
+        //         green();
+        //         await happen(el, 'click');
+        //         yellow();
+        //         await happen(el, 'click');
+        //         red();
+        //         await happen(el, 'click');
+        //     }
+        // }
+
+        // function happen(ele, ev) {
+        //     return new Promise(resolve => {
+        //         ele.addEventListener(ev, resolve, {once: true})
+        //     })
+        // }
+
+        function sleep(t) {
+            return new Promise(resolve => {
+                setTimeout(resolve, t)
+            })
+        }
+
+        // initByHand();
+
+
+        function* go() {
+            while(true) {
+                green();
+                yield sleep(1000);
+                yellow();
+                yield sleep(1000);
+                red();
+                yield sleep(1000);
+            }
+        }
+
+        function run(iterator) {
+            let {value, done} = iterator.next();
+            if (done) {
+                return;
+            }
+            if (value instanceof Promise) {
+                value.then(() => {
+                    run(iterator)
+                })
+            }
+        }
+
+        function co(generator) {
+            return function() {
+                return run(generator());
+            }
+        }
+
+        go = co(go);
+    </script>
+</body>
+
+</html>
