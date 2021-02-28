@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-To</title>
+    <style>
+        .cell {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            display: inline-block;
+            border: 1px solid white;
+            vertical-align: middle;
+            line-height: 100px;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board"></div>
+
+    <script>
+        const board = document.getElementById('board');
+
+        let pattern = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+        ];
+
+        let color = 1;
+        let winFlag = false;
+
+        const CONSTANT = {
+            WILL_WIN: 1,
+            WILL_DROP: 0,
+            WILL_LOST: -1
+        }
+
+        function init() {
+            render();
+        }
+
+        function render() {
+            board.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    renderCell(j, i);
+                }
+                renderLineSplit();
+            }
+        }
+
+        function renderCell(x, y) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.innerText = getCellContent(x, y);
+            cell.addEventListener('click', () => userMove(x, y));
+            board.appendChild(cell);
+        }
+
+        function getCellContent(x, y) {
+            return pattern[y][x] === 2 ? '❌' :
+                pattern[y][x] === 1 ? '⭕️' : '';
+        }
+
+        function move(x, y) {
+            if (winFlag) {
+                return;
+            }
+            if (pattern[y][x] !== 0) {
+                return;
+            }
+            pattern[y][x] = color;
+            color = nextColor();
+            
+            render();
+            if (testHasWon(pattern, pattern[y][x])) {
+                winFlag = true;
+                addWinText(x, y);
+                return;
+            };
+            if (willWin(pattern, color)) {
+                addWillWinText();
+            }
+            
+        }
+
+        function userMove(x, y) {
+
+            pattern[y][x] = color;
+            if (testHasWon(pattern, color)) {
+                addText(color === 2 ? '❌' : '⭕️' + ' is winner.');
+            }
+            render();
+            color = nextColor();
+            computerMove();
+        }
+
+        function computerMove() {
+
+            let choice = bestChoice(pattern, color);
+            if (choice.point) {
+                pattern[choice.point[1]][choice.point[0]] = color;
+            }
+            if (testHasWon(pattern, color)) {
+                addText(color === 2 ? '❌' : '⭕️' + ' is winner.');
+            }
+            render();
+            color = nextColor();
+        }
+
+        function testHasWon(pattern, currentColor) {
+            for (let i = 0; i < 3; i++) {
+                let hasWon = true;
+                for (let j = 0; j < 3; j++) {
+                    // 三行横队
+                    if (pattern[i][j] !== currentColor) {
+                        hasWon = false;
+                    }
+                }
+                if (hasWon) {
+                    return true;
+                }
+            }
+            for (let i = 0; i < 3; i++) {
+                let hasWon = true;
+                for (let j = 0; j < 3; j++) {
+                    // 三列纵队
+                    if (pattern[j][i] !== currentColor) {
+                        hasWon = false;
+                    }
+
+                }
+                if (hasWon) {
+                    return true;
+                }
+            }
+            {
+                let hasWon = true;
+                for (let i = 0; i < 3; i++) {
+                    if (pattern[i][i] !== currentColor) {
+                        hasWon = false;
+                    }
+                }
+
+                if (hasWon) {
+                    return true;
+                }
+            }
+
+            {
+                let hasWon = true;
+                for (let i = 0; i < 3; i++) {
+                    if (pattern[i][2-i] !== currentColor) {
+                        hasWon = false;
+                    }
+                }
+                if (hasWon) {
+                    return true;
+                }
+            }
+           
+
+            return false;
+        }
+
+        
+        function willWin(pattern, nextColor) {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if (pattern[i][j]) {
+                        continue;
+                    }
+                    let tmp = clone(pattern);
+
+                    tmp[i][j] = nextColor;
+                    if (testHasWon(tmp, nextColor)) {
+                        return [j, i];
+                    };
+                }
+            }
+            return null;
+        }
+
+        function clone(pattern) {
+            return JSON.parse(JSON.stringify(pattern));
+        }
+
+        function bestChoice(pattern, color) {
+            let p;
+            // result 
+            if (p = willWin(pattern, color)) {
+                return {
+                    point: p,
+                    result: CONSTANT.WILL_WIN
+                }
+            }
+            let result = -2;
+            let point = null;
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j< 3; j++) {
+                    if (pattern[i][j]) {
+                        continue;
+                    }
+                    let tmp = clone(pattern);
+                    tmp[i][j] = color;
+                    let r = bestChoice(tmp, nextColor()).result;
+                    if (-r > result) {
+                        result = -r;
+                        point = [j, i]
+                    }
+                }
+            }
+            return {
+                point: point,
+                result: point ? result : 0
+            }
+        }
+        
+        function addWinText(x, y) {
+            const text = getCellContent(x, y) + ' is winner';
+            addText(text);
+        }
+
+        function addWillWinText() {
+            // TODO
+            const text = (color === 2 ? '❌' : '⭕️' ) + 'will win';
+            addText(text);
+        }
+
+        function addText(text) {
+            const p = document.createElement('p');
+            p.innerHTML = text
+            document.body.appendChild(p);
+        }
+
+        function nextColor() {
+            return 3 - color;
+        }
+
+        function renderLineSplit() {
+            board.appendChild(document.createElement('br'));
+        }
+
+        init();
+    </script>
+
+</body>
+
+</html>
