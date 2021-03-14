@@ -44,7 +44,7 @@
     let source = [];
 
 
-    for (let token of tokenize('1 + 2')) {
+    for (let token of tokenize('1 - 2')) {
         if (token.type !== "Whitespace" && token.type !== 'LineTerminator') {
             source.push(token);
         }

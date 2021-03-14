@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week_03/3-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_03/3-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_03/3-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_03/3-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_03/3-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_03/3-0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_03/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_03/3-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_03/3-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_03/3-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_03/3-6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week_03/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_03/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +76,16 @@
       <updated>1615003098358</updated>
       <workItem from="1615003102059" duration="83000" />
       <workItem from="1615004280934" duration="12191000" />
-      <workItem from="1615630515877" duration="6820000" />
+      <workItem from="1615630515877" duration="10638000" />
     </task>
+    <task id="LOCAL-00001" summary="第三周课程代码">
+      <created>1615647365103</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615647365103</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

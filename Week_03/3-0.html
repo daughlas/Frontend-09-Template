@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const regexp = /([0-9\.]+)|([ \t]+)|([\r\n]+)|(\*)|(\/)|(\+)|(\-)/g;
+    const dictionary = ['Number', 'WhiteSpace', 'LineTerminator', '*', '/', '+', '-'];
+    const toHandle = '1 / 1';
+
+    function* tokenize(source) {
+        let result = null;
+        while(true) {
+            result = regexp.exec(source);
+
+            if (!result) {
+                break;
+            }
+            let token = {
+                type: null,
+                value: null
+            }
+            for (let i  = 1; i <= dictionary.length; i++) {
+                if (result[i]) {
+                    token.type = dictionary[i - 1];
+                }
+            }
+            token.value = result[0];
+            yield token;
+        }
+        yield {
+            type: 'EOF'
+        }
+    }
+
+    let source = [];
+
+    for (let token of tokenize(toHandle)) {
+        if (token.type !== 'WhiteSpace' && token.type !== 'LineTerminator') {
+            source.push(token);
+        }
+    }
+    console.log(source);
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
