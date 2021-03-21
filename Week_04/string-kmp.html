@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string-KMP</title>
+</head>
+<body>
+<h1>字符串模式匹配 KMP</h1>
+<h4>请打开控制台查看</h4>
+
+<script>
+    function kmp(source, pattern) {
+        // 计算 table
+        let table = new Array(pattern.length).fill(0);
+
+        {
+            let index = 1, repeatTimes = 0;
+            while (index < pattern.length) {
+                if (pattern[index] === pattern[repeatTimes]) {
+                    ++index;
+                    ++repeatTimes;
+                    table[index] = repeatTimes;
+                } else {
+                    if (repeatTimes > 0) {
+                        repeatTimes = table[repeatTimes]
+                    } else {
+                        ++index;
+                    }
+                }
+            }
+            console.log(table.map((item,index) => [pattern[index], item]));
+        }
+
+        {
+            let sourceIndex = 0, patternIndex = 0;
+            while( sourceIndex < source.length) {
+                if (pattern[patternIndex] === source[sourceIndex]) {
+                    ++sourceIndex;
+                    ++patternIndex
+                } else {
+                    if (patternIndex  > 0) {
+                        patternIndex = table[patternIndex]
+                    } else {
+                        ++sourceIndex;
+                    }
+                }
+                if (patternIndex === pattern.length) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+    }
+
+    console.log(kmp('a1', 'a2'));
+
+</script>
+</body>
+</html>

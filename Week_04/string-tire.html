@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字典树</title>
+</head>
+<body>
+<h1>构造一个字典树</h1>
+<h4>请打开控制台查看</h4>
+
+<script>
+    let $ = Symbol('$');
+    class Tire {
+        constructor() {
+            this.root = Object.create(null);
+        }
+
+        insert(word) {
+            let node = this.root;
+            for (let c of word) {
+                if (!node[c]) {
+                    node[c] = Object.create(null);
+                }
+                node = node[c];
+            }
+            if (!($ in node)) {
+                node[$] = 0
+            }
+            node[$]++;
+        }
+
+        most() {
+            let max = 0;
+            let maxWord = null;
+            let visit = (node, word) => {
+
+
+                if (node[$] && node[$] > max) {
+                    max = node[$];
+                    maxWord = word;
+                }
+                for (let p in node) {
+                    visit(node[p], word + p);
+                }
+            }
+            visit(this.root, '');
+            return {
+                max,
+                maxWord
+            }
+        }
+    }
+
+    function randomWord(length) {
+        let ret = '';
+        for (let i = 0; i < length; i++) {
+            ret += String.fromCharCode(Math.floor(Math.random() * 26) + 'a'.codePointAt(0));
+        }
+        return ret;
+    }
+
+    let  tire = new Tire();
+
+    for (let i = 0; i < 100000; i++) {
+        let word = randomWord(4);
+        tire.insert(word);
+    }
+
+    console.log(tire)
+    console.log(tire.most())
+</script>
+
+</body>
+</html>
