@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+</head>
+<body>
+<div id="container">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa delectus doloremque ex omnis pariatur. Adipisci aliquid animi at, cumque debitis earum eos fuga natus odio officia pariatur soluta tenetur.
+</div>
+
+
+<div id="draggable" style="display: inline-block;width: 100px;height: 100px;background: lightblue"></div>
+<script>
+    let draggable = document.getElementById('draggable');
+
+    let baseX = 0, baseY = 0;
+
+    draggable.addEventListener('mousedown', function(ev) {
+        let startX = ev.clientX;
+        let startY = ev.clientY;
+        let up = (ev) => {
+            console.log(ev);
+            baseX = baseX + ev.clientX - startX;
+            baseY = baseY+ ev.clientY - startY;
+            document.removeEventListener('mousemove', move);
+            document.removeEventListener('mouseup', up);
+
+        }
+
+        let move = (ev) => {
+            // draggable.style.transform = `translate(${baseX + ev.clientX - startX}px, ${baseY + ev.clientY -startY}px)`
+
+            let range = getNearest(ev.clientX, ev.clientY);
+            range.insertNode(draggable);
+        }
+        document.addEventListener('mousemove', move);
+
+        document.addEventListener('mouseup', up);
+    })
+
+    let ranges = [];
+
+    let container = document.getElementById('container');
+    for (let i = 0; i < container.childNodes[0].textContent.length;i++) {
+        let range = document.createRange();
+        range.setStart(container.childNodes[0], i);
+        range.setEnd(container.childNodes[0], i);
+        ranges.push(range);
+    }
+
+    function getNearest(x, y) {
+        let min = Infinity;
+        let nearest = null;
+
+        for (let range of ranges) {
+            let rect = range.getBoundingClientRect();
+            let distance = (rect.x - x) ** 2 + (rect.y - y) ** 2
+            if (distance < min) {
+                min = distance;
+                nearest = range;
+            }
+        }
+        return nearest;
+    }
+
+    document.addEventListener('selectstart', ev => ev.preventDefault())
+</script>
+</body>
+</html>
