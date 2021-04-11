@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/string-number.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/string-number.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/类型转换.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/2-类型转换.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/表达式.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/1-表达式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_07/语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/3-语句.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <workItem from="1617536415454" duration="8128000" />
       <workItem from="1617584910617" duration="488000" />
       <workItem from="1617977030143" duration="6572000" />
-      <workItem from="1618152794197" duration="2567000" />
+      <workItem from="1618152794197" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
