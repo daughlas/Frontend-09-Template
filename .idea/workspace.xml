@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week_06/JS 类型.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_06/JS语言通识.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_07/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_07/类型转换.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_07/结构化.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_07/表达式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_07/语句.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_06/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_06/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +60,19 @@
       <recent name="$PROJECT_DIR$/Week_02" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +91,9 @@
       <workItem from="1616852054941" duration="5637000" />
       <workItem from="1616933701960" duration="149000" />
       <workItem from="1617494913862" duration="7004000" />
-      <workItem from="1617536415454" duration="7192000" />
+      <workItem from="1617536415454" duration="8128000" />
+      <workItem from="1617584910617" duration="488000" />
+      <workItem from="1617977030143" duration="4722000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
