@@ -1,10 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>string number 转换</title>
 </head>
 <body>
-$END$
+<script>
+    function convertStr2Num(str) {
+        try {
+            new Number(str);
+            let chars = str.split('');
+            const zeroCode = '0'.codePointAt(0);
+            let number = 0;
+            let base = 10;
+            if (str.startsWith('0b')) {
+                base = 2;
+                chars = chars.slice(2)
+            } else if (str.startsWith('0x')) {
+                base = 8
+                chars = chars.slice(2)
+            } else if (str.startsWith('0o')) {
+                base = 16
+                chars = chars.slice(2)
+            }
+
+            for (let char of chars) {
+                number = number * base;
+                number += char.codePointAt(0) - zeroCode;
+            }
+
+            return number;
+        } catch(e) {
+            console.error(e);
+            throw e;
+        }
+
+    }
+
+
+
+    let ret = convertStr2Num('123');
+    let ret2 = convertStr2Num('0b11');
+    let ret3 = convertStr2Num('0o11');
+    let ret4 = convertStr2Num('0x11');
+    console.log(ret);
+    console.log(ret2);
+    console.log(ret3);
+    console.log(ret4);
+
+    function convertNum2Str(int) {
+        try {
+            int.toString();
+            let str = '';
+
+            while(int >= 0) {
+                str = String(int % 10) + str;
+                int = Math.floor(int / 10);
+            }
+
+            return str;
+        } catch(e) {
+            console.error(e);
+            throw e;
+        }
+
+    }
+
+    [100, 0, 'abc', NaN].forEach(item => {
+        console.log(convertNum2Str(item))
+    })
+</script>
+
 </body>
 </html>
