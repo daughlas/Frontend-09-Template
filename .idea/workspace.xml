@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Week_07/4-声明语句.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_08/2-HTTP 请求.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_08/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_08/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/3-语句.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_07/3-语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/3-语句.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_07/结构化.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/5-结构化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_08/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_08/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,6 +53,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -57,18 +65,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_08">
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,7 +90,11 @@
       <workItem from="1617536415454" duration="8128000" />
       <workItem from="1617584910617" duration="488000" />
       <workItem from="1617977030143" duration="6572000" />
-      <workItem from="1618152794197" duration="3104000" />
+      <workItem from="1618152794197" duration="3144000" />
+      <workItem from="1618192032033" duration="4000" />
+      <workItem from="1618226302467" duration="2644000" />
+      <workItem from="1618616342777" duration="13933000" />
+      <workItem from="1618735546832" duration="5576000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
@@ -144,5 +146,13 @@
     <MESSAGE value="第三周课程代码" />
     <MESSAGE value="week four homework" />
     <option name="LAST_COMMIT_MESSAGE" value="week four homework" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="this.length" language="JavaScript" />
+        <watch expression="this.content.join('')" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
