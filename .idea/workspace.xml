@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week_07/4-声明语句.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_08/2-HTTP 请求.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_08/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_08/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_09/1-HTML 解析.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_09/2-CSS 计算.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_09/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_09/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_09/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/3-语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/3-语句.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_07/结构化.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_07/5-结构化.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_08/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_08/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_09/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_09/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +45,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_04" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.41" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_09" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,13 +63,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_09" />
       <recent name="$PROJECT_DIR$/Week_04" />
       <recent name="$PROJECT_DIR$/Week_03" />
       <recent name="$PROJECT_DIR$/Week_02" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_08">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_09">
       <method v="2" />
     </configuration>
   </component>
@@ -94,7 +110,12 @@
       <workItem from="1618192032033" duration="4000" />
       <workItem from="1618226302467" duration="2644000" />
       <workItem from="1618616342777" duration="13933000" />
-      <workItem from="1618735546832" duration="5576000" />
+      <workItem from="1618735546832" duration="5681000" />
+      <workItem from="1618796327026" duration="4000" />
+      <workItem from="1619072573236" duration="130000" />
+      <workItem from="1619224719881" duration="4856000" />
+      <workItem from="1619262733017" duration="9061000" />
+      <workItem from="1619347465195" duration="7296000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
@@ -148,11 +169,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="week four homework" />
   </component>
   <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="NodeJSConfigurationType">
-        <watch expression="this.length" language="JavaScript" />
-        <watch expression="this.content.join('')" language="JavaScript" />
-      </configuration>
-    </watches-manager>
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Week_09/client.js</url>
+          <line>208</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
