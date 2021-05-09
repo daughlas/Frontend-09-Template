@@ -1,0 +1,19 @@
+{
+  "name": "Week_10",
+  "version": "1.0.0",
+  "description": "学习笔记",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css": "^3.0.0"
+  },
+  "dependencies": {
+    "images": "^3.2.3"
+  }
+}
