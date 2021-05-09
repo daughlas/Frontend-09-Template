@@ -24,3 +24,9 @@ crossSize, crossStart, crossEnd, crossSign, crossBase;
 * 递归调用子元素的绘制方法，忽略掉不需要绘制的节点（没有style，没有 children）
 * 实际浏览器中，文字绘制是难点，需要依赖自体库
 * 实际浏览器中，还会对一些图层进行 compositing
+
+# 总结
+* 收获了两个学习方法
+    1. 到知识源头去学习
+    2. 穷举法学系知识
+* 开拓了编程的视野，js 代码不仅是可以写写页面，还可以做很多事情
