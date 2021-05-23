@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_09/1-HTML 解析.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_09/2-CSS 计算.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_09/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_09/parser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_09/server.js" afterDir="false" />
+    <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="week four homework">
+      <change afterPath="$PROJECT_DIR$/Week_12/float.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_12/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_09/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_09/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_11/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_11/crawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/crawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_11/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_11/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_12/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,6 +37,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1pMq243mexcsMk1zV7zvyMA0lPK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,9 +49,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.41" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_09" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.45" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_10" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_10" />
       <recent name="$PROJECT_DIR$/Week_09" />
       <recent name="$PROJECT_DIR$/Week_04" />
       <recent name="$PROJECT_DIR$/Week_03" />
@@ -70,18 +72,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_09">
+    <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_10">
       <method v="2" />
     </configuration>
   </component>
@@ -115,7 +106,13 @@
       <workItem from="1619072573236" duration="130000" />
       <workItem from="1619224719881" duration="4856000" />
       <workItem from="1619262733017" duration="9061000" />
-      <workItem from="1619347465195" duration="7296000" />
+      <workItem from="1619347465195" duration="8510000" />
+      <workItem from="1620481870285" duration="17420000" />
+      <workItem from="1620611349778" duration="1000" />
+      <workItem from="1621129207495" duration="1698000" />
+      <workItem from="1621170676589" duration="6192000" />
+      <workItem from="1621654573355" duration="4770000" />
+      <workItem from="1621761164694" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
@@ -172,10 +169,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Week_09/client.js</url>
-          <line>208</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/Week_10/parser.js</url>
+          <line>77</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Week_10/parser.js</url>
+          <line>15</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

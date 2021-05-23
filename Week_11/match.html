@@ -1,26 +1,78 @@
-function match(selector, element) {
-    if(!selector || !element.attributes) {
-        return false;
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <div id="myid" class="class"></div>
+</div>
+
+<script>
+    // 只包含 class id 和 type 类型的选择器
+    function match(selector, element) {
+        if(!selector || !element.attributes) {
+            return false;
+        }
+        const selectorParts = selector.split(' ').reverse();
+        let flag
+        while(selectorParts.length) {
+            let part = selectorParts[0]
+            if (part.indexOf('#') !== -1 ) {
+                let id = getId(part)[0];
+                const eleIdAttr = Array.prototype.slice.call(element.attributes).filter(attr => attr.name === 'id')[0];
+                console.log(id)
+                if (eleIdAttr && eleIdAttr.value === id.replace('#', '')) {
+                    part = part.replace('#'+eleIdAttr.value, '');
+                }
+
+            }
+
+            if (part.indexOf('.') !== -1) {
+                const className = getClass(part)[0];
+                const eleClassAttr = Array.prototype.slice.call(element.attributes).filter(attr => attr.name === 'class')[0];
+                if (eleClassAttr && eleClassAttr.value === className.replace('.', '')) {
+                    part = part.replace('.' + eleClassAttr.value, '');
+                }
+            }
+
+            if (part && element.tagName === part.toUpperCase()) {
+                part = part.replace(element.tagName.toLowerCase(), '');
+            }
+
+            if (part.length === 0) {
+                selectorParts.shift();
+            }
+            if (element.parentElement) {
+                element = element.parentElement;
+            } else {
+                break;
+            }
+        }
+        return !selectorParts.length;
     }
-    const selectorParts = selector.split(' ').reverse();
-    if (selector.charAt(0) === '#') {
-        const attr = element.attributes.filter(attr => attr.name === 'id')[0];
-        if (attr && attr.value === selector.replace('#', '')) {
-            return true;
-        }
-    } else if (selector.charAt(0) === '.') {
-        const attr = element.attributes.filter(attr => attr.name === 'class')[0];
-        if (attr && attr.value === selector.replace('.', '')) {
-            return true;
-        }
-    } else {
-        if (element.tagName === selector) {
-            return true;
-        }
+
+    function getId(str) {
+        // TODO 判断
+        const reg = /#[a-zA-Z0-9|\-|_|]+/;
+        return str.match(reg);
+
     }
-    return false;
-}
+
+    function getClass(str) {
+        // TODO 判断
+        const reg = /\.[a-zA-Z0-9|\-|_|]+/;
+        return str.match(reg);
+    }
+
+    let result = match("div #myid.class", document.getElementById("myid"));
+    console.log(result);
+</script>
+</body>
+</html>
 
 
-
-match("div #myid.class", document.getElementById("myid"));
