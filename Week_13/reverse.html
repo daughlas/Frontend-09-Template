@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>reverse</title>
 </head>
 <body>
-$END$
+<div id="a">
+  <span>1</span>
+  <p>2</p>
+  <a>3</a>
+  <div>4</div>
+</div>
+
+<script>
+let element = document.getElementById('a');
+
+function reverseChildren(element) {
+    const children = Array.prototype.slice.call(element.childNodes);
+
+    // for(let child of children) {
+    //   element.removeChild(child);
+    // }
+
+    element.innerHTML = '';
+
+    children.reverse();
+
+  for(let child of children) {
+    element.appendChild(child);
+  }
+}
+
+function reverseChildrenPro(element) {
+  let length = element.childNodes.length;
+  let index = length--;
+  while(index-- > 0) {
+    element.appendChild(element.childNodes[index])
+  }
+}
+
+function reverseChildrenProPlus(element) {
+  const range = new Range();
+  range.selectNodeContents(element);
+
+  let fragment = range.extractContents();
+  console.log(fragment);
+
+  let l = fragment.childNodes.length;
+  while(l-- > 0) {
+    fragment.appendChild(fragment.childNodes[l]);
+  }
+
+  element.appendChild(fragment);
+}
+
+reverseChildrenProPlus(element);
+</script>
+
 </body>
 </html>

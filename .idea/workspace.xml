@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="week four homework">
-      <change afterPath="$PROJECT_DIR$/Week_12/float.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="chore: finish week 12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_11/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_11/crawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/crawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_11/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/match.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_11/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_11/select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_12/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_13/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_13/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_13/example-bubble.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_13/example-bubble.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_13/get-apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_13/get-apis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_13/range.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_13/range.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_13/reverse.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_13/reverse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +67,9 @@
       <recent name="$PROJECT_DIR$/Week_03" />
       <recent name="$PROJECT_DIR$/Week_02" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_12" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_10">
@@ -112,7 +112,10 @@
       <workItem from="1621129207495" duration="1698000" />
       <workItem from="1621170676589" duration="6192000" />
       <workItem from="1621654573355" duration="4770000" />
-      <workItem from="1621761164694" duration="1416000" />
+      <workItem from="1621761164694" duration="2062000" />
+      <workItem from="1622359918501" duration="751000" />
+      <workItem from="1622360685553" duration="13722000" />
+      <workItem from="1622942195044" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
@@ -142,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616339008013</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chore: finish week 12">
+      <created>1621776501835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621776501835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第三周课程代码" />
     <MESSAGE value="week four homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="week four homework" />
+    <MESSAGE value="chore: finish week 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: finish week 12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
