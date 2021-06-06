@@ -19,44 +19,76 @@ class Carousel extends Component {
       this.root.appendChild(el);
     }
 
-    // this.root.addEventListener("mousedown", (event) => {
-    //   console.log("mouse down");
+    let position = 0;
 
-    //   let move = (event) => {
-    //     console.log("mouse move");
-    //     // 推荐使用 client X 和 client Y
-    //   };
-
-    //   let up = (event) => {
-    //     console.log("mouse up");
-    //     document.removeEventListener("mousemove", move);
-    //     document.removeEventListener("mouseup", up);
-    //   };
-
-    //   document.addEventListener("mousemove", move);
-
-    //   document.addEventListener("mouseup", up);
-    // });
-
-    let currentIndex = 0;
-
-    setInterval(() => {
+    this.root.addEventListener("mousedown", (event) => {
+      let startX = event.clientX;
       let children = this.root.children;
-      let nextIndex = (currentIndex + 1) % children.length;
 
-      let current = children[currentIndex];
-      let next = children[nextIndex];
+      let move = (ev) => {
+        // 推荐使用 client X 和 client Y
+        let x = ev.clientX - startX;
 
-      next.style.transition = "none";
-      next.style.transform = `translateX(${100 - nextIndex * 100}%)`;
-      setTimeout(() => {
-        next.style.transition = "";
-        current.style.transform = `translateX(${-100 - currentIndex * 100}%)`;
-        next.style.transform = `translateX(${-nextIndex * 100}%)`;
+        let current = position - Math.round((x - (x % 500)) / 500);
 
-        currentIndex = nextIndex;
-      }, 16);
-    }, 3000);
+        for (let offset of [-1, 0, 1]) {
+          let pos = current + offset;
+          pos = (pos + children.length) % children.length;
+
+          children[pos].style.transition = "none";
+          children[pos].style.transform = `translateX(${
+            -pos * 500 + offset * 500 + (x % 500)
+          }px)`;
+        }
+      };
+
+      let up = (ev) => {
+        let x = ev.clientX - startX;
+        position =
+          (position - Math.round(x / 500) + children.length) % children.length;
+
+        for (let offset of [
+          0,
+          -Math.sign(Math.round(x / 500) - x + 250 * Math.sign(x)),
+        ]) {
+          let pos = position + offset;
+          console.log(pos);
+          pos = (pos + children.length) % children.length;
+
+          children[pos].style.transition = "";
+          children[pos].style.transform = `translateX(${
+            -pos * 500 + offset * 500
+          }px)`;
+        }
+
+        document.removeEventListener("mousemove", move);
+        document.removeEventListener("mouseup", up);
+      };
+
+      document.addEventListener("mousemove", move);
+
+      document.addEventListener("mouseup", up);
+    });
+
+    // let currentIndex = 0;
+
+    // setInterval(() => {
+    //   let children = this.root.children;
+    //   let nextIndex = (currentIndex + 1) % children.length;
+
+    //   let current = children[currentIndex];
+    //   let next = children[nextIndex];
+
+    //   next.style.transition = "none";
+    //   next.style.transform = `translateX(${100 - nextIndex * 100}%)`;
+    //   setTimeout(() => {
+    //     next.style.transition = "";
+    //     current.style.transform = `translateX(${-100 - currentIndex * 100}%)`;
+    //     next.style.transform = `translateX(${-nextIndex * 100}%)`;
+
+    //     currentIndex = nextIndex;
+    //   }, 16);
+    // }, 3000);
 
     return this.root;
   }
