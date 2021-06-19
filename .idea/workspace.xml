@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="chore: finish week 12">
-      <change afterPath="$PROJECT_DIR$/Week_15/animation/src/animation-demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_15/animation/src/animation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_15/animation/src/ease.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_15/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_15/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_15/gesture/gesture.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_15/gesture/gesture.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +69,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_10">
       <method v="2" />
     </configuration>
@@ -128,7 +113,8 @@
       <workItem from="1622359918501" duration="751000" />
       <workItem from="1622360685553" duration="13722000" />
       <workItem from="1622942195044" duration="7000" />
-      <workItem from="1623576635401" duration="11312000" />
+      <workItem from="1623576635401" duration="13440000" />
+      <workItem from="1624070796113" duration="3376000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>

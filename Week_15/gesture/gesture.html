@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <title>gesture</title>
 </head>
-<body>
-<script src="./gesture.js"></script>
+<body oncontextmenu="event.preventDefault()">
+<script src="./gesture.js">
+    document.documentElement.addEventListener('tap', () => {
+        console.log('12312312312312312312312');
+    })
+</script>
 
 </body>
 </html>
