@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="chore: finish week 12">
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/dist/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/animation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/carousel2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/ease.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/gesture.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_15/gesture/gesture.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_15/gesture/gesture.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_15/gesture/gesture.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,7 +53,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.45" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_15/carousel/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_16/carousel/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,17 +66,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_16/carousel/src" />
+      <recent name="$PROJECT_DIR$/Week_16" />
       <recent name="$PROJECT_DIR$/Week_15/carousel/src" />
       <recent name="$PROJECT_DIR$/Week_15" />
       <recent name="$PROJECT_DIR$/Week_10" />
-      <recent name="$PROJECT_DIR$/Week_09" />
-      <recent name="$PROJECT_DIR$/Week_04" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Week_12" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_10">
       <method v="2" />
     </configuration>
@@ -114,7 +135,10 @@
       <workItem from="1622360685553" duration="13722000" />
       <workItem from="1622942195044" duration="7000" />
       <workItem from="1623576635401" duration="13440000" />
-      <workItem from="1624070796113" duration="6047000" />
+      <workItem from="1624070796113" duration="6232000" />
+      <workItem from="1624114656778" duration="5915000" />
+      <workItem from="1624143702953" duration="224000" />
+      <workItem from="1624143930893" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
