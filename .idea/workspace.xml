@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="chore: finish week 12">
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/dist/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/animation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/carousel2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/ease.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/gesture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_16/carousel/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/carousel2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +134,7 @@
       <workItem from="1624070796113" duration="6232000" />
       <workItem from="1624114656778" duration="5915000" />
       <workItem from="1624143702953" duration="224000" />
-      <workItem from="1624143930893" duration="2009000" />
+      <workItem from="1624143930893" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
