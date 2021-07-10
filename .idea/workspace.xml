@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4176ed46-3ab9-47a9-befe-ffe88496eee9" name="Default Changelist" comment="chore: finish week 12">
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week_16/carousel/src/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week_18/html-parser/src/parser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_16/carousel/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/dist/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/carousel2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/framework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week_16/carousel/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week_16/carousel/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_17/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_17/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_18/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_18/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.45" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_16/carousel/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Week_18/html-parser/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,30 +59,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_18/html-parser/src" />
       <recent name="$PROJECT_DIR$/Week_16/carousel/src" />
       <recent name="$PROJECT_DIR$/Week_16" />
       <recent name="$PROJECT_DIR$/Week_15/carousel/src" />
       <recent name="$PROJECT_DIR$/Week_15" />
-      <recent name="$PROJECT_DIR$/Week_10" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Week_12" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="client" type="NodeJSConfigurationType" path-to-js-file="client.js" working-dir="$PROJECT_DIR$/Week_10">
       <method v="2" />
     </configuration>
@@ -135,6 +119,10 @@
       <workItem from="1624114656778" duration="5915000" />
       <workItem from="1624143702953" duration="224000" />
       <workItem from="1624143930893" duration="6590000" />
+      <workItem from="1624186770391" duration="460000" />
+      <workItem from="1624754125765" duration="8000" />
+      <workItem from="1625580509202" duration="417000" />
+      <workItem from="1625580988042" duration="2532000" />
     </task>
     <task id="LOCAL-00001" summary="第三周课程代码">
       <created>1615647365103</created>
@@ -194,21 +182,5 @@
     <MESSAGE value="week four homework" />
     <MESSAGE value="chore: finish week 12" />
     <option name="LAST_COMMIT_MESSAGE" value="chore: finish week 12" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Week_10/parser.js</url>
-          <line>77</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Week_10/parser.js</url>
-          <line>15</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
